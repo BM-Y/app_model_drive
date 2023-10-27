@@ -1,16 +1,18 @@
 
 import {useState}from 'react'
+import {Quantity}from'./Quantity.jsx'
 
 
-
-export function Produit(){
-    const [listProduits , setList]= useState()
-    fetch('https://api.npoint.io/68bf5db20a3c236f68ed')
-
-    .then(res=>res.json())
-    .then((data)=>setList(data))
+export function Produit({product}){
     
-    console.log(listProduits)
 
-    return 
+    return(
+    
+    <article>
+
+        <img src={product.image} alt="236" />
+        <h2>{product.nom}</h2>
+
+    </article>
+    )
 }

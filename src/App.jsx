@@ -1,7 +1,9 @@
 
 import './App.css'
-import './compoments/Carte.jsx'
-import {List } from './compoments/List.jsx'
+import {Carte} from'./compoments/Carte.jsx'
+import {List} from './compoments/List.jsx'
+import {useState, useEffect}from 'react'
+
 
 
 
@@ -9,10 +11,30 @@ import {List } from './compoments/List.jsx'
 
 
 function App() {
+  const [list, setList]= useState([])
+  const [selected ,setSelected]= useState([])
 
-  return <List  />
+  useEffect(() =>{
+      fetch('https://api.npoint.io/68bf5db20a3c236f68ed')
+      .then(res=>res.json())
+      .then(data=>setList(data))
+  },[])
 
-  
+  function selectProduct(product){
+
+    
+
+  }
+
+  return (
+
+  <>
+        <List list={list}/>
+        <Carte product={selected}/>
+        
+
+  </>
+  )
 }
 
 export default App
