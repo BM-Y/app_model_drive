@@ -21,8 +21,7 @@ function App() {
   },[])
 
   function selectProduct(product){
-
-    
+ 
 
   }
 
@@ -30,7 +29,7 @@ function App() {
 
   <>
         <List list={list}/>
-        <Carte product={selected}/>
+        <Carte />
         
 
   </>

@@ -1,10 +1,9 @@
 
 
+import{Produit}from'./Produit.jsx'
+
+export function Carte(){
 
 
-export function Carte(selected){
-
-
-
+    }
     
-}
